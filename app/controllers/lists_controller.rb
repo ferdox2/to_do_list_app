@@ -11,6 +11,11 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.csv { send_data @list.tasks.to_csv, filename: "lists-#{Date.today}.csv" }
+      format.pdf { render template: 'lists/list_pdf', pdf: 'ToDoList' }
+    end
   end
 
   # GET /lists/new
