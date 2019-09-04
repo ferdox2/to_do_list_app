@@ -15,7 +15,7 @@
   <tbody>
     <% @lists.each do |list| %>
       <tr>
-        <td><%= list.tittle %></td>
+        <td><%= link_to list.tittle, list_tasks_path(list) %></td>
         <td><%= list.completed %></td>
         <td><%= list.user %></td>
         <td><%= link_to 'Show', list %></td>
