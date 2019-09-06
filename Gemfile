@@ -58,3 +58,21 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'wkhtmltopdf-heroku'
 
+gem 'redis-rails'
+gem 'redis-namespace'
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
+
+gem "bootstrap", "~> 4.3"
+
+gem "jquery-rails", "~> 4.3"
+gem 'rspec-rails', '~> 3.6'
+gem "factory_bot_rails"
+gem 'rails-controller-testing'
+gem 'headless'
+gem 'capybara'
+gem 'poltergeist'
+gem 'database_cleaner'
+gem 'selenium-webdriver'
+gem 'chromedriver-helper'
+gem 'figaro'

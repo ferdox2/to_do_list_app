@@ -1,0 +1,6 @@
+
+
+:schedule:
+  send_notification:
+  cron: '* * * * 1 *'
+  class: SendMailWorker
