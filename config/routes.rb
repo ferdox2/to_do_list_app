@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'
 
   devise_scope :user do
-    root to: 'devise/sessions#new'
+    authenticated :user do
+      root to: 'lists#index'
+    end
+    unauthenticated :user do
+      root to: 'devise/sessions#new'
+    end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
