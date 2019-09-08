@@ -1,6 +1,11 @@
-
+:concurrency: 10
+:pidfile: './tmp/pids/sidekiq.pid'
+:logfile: './log/sidekiq.log'
+:queues:
+  - mailer
+  - default
 
 :schedule:
   send_notification:
-  cron: '* * * * 1 *'
+  cron: '0 * * * * *'
   class: SendMailWorker
