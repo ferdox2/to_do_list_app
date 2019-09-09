@@ -8,7 +8,22 @@
 </head>
 <body>
   <h1> <%= @list.tittle %> </h1>
-
-  
+  <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Tittle</th>
+            <th>Completed</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+          <tbody>
+            <%= @list.tasks.each do |task| %>
+          <tr>
+            <td> <%= task.tittle.titleize() %></td>
+            <td> <%= task.description.capitalize() %></td>
+          </tr>
+          <% end %>
+          </tbody>
+      </table>
 </body>
 </html>
