@@ -1,5 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :list
+  validates :tittle, :description, presence: true
 
   def self.to_csv(fields = column_names)
     CSV.generate(headers: true) do |csv|
